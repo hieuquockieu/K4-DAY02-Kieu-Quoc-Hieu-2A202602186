@@ -1,9 +1,9 @@
 # Phiếu quy tắc gán nhãn — Ngày 2
 
-**Họ và tên:** CHƯA ĐIỀN<br>
-**MSSV:** CHƯA ĐIỀN<br>
-**Hình thức:** CHƯA ĐIỀN — cá nhân hoặc theo cặp<br>
-**Mã cặp:** CHƯA ĐIỀN — ghi `SOLO` nếu làm cá nhân
+**Họ và tên:** Kiều Quốc Hiếu<br>
+**MSSV:** 2A202602186<br>
+**Hình thức:** cá nhân<br>
+**Mã cặp:** `SOLO`
 
 ## 1. Phạm vi
 
@@ -46,28 +46,28 @@ Hoàn thành trước khi xem bài của người khác hoặc bộ nhãn tham c
 
 ### Tình huống A — xe buýt hay xe van?
 
-- Ảnh và mã vật thể: CHƯA ĐIỀN
-- Dấu hiệu nhìn thấy: CHƯA ĐIỀN
-- Quy tắc áp dụng: CHƯA ĐIỀN
-- Quyết định: CHƯA ĐIỀN
-- Nếu vẫn thiếu bằng chứng, bạn sẽ làm gì? CHƯA ĐIỀN
+- Ảnh và mã vật thể: drive_038.jpg, xe màu đỏ ở giữa bên phải
+- Dấu hiệu nhìn thấy: Xe chở khách loại nhỏ (như Ford Transit), có thân hộp nhỏ, không phải thân xe buýt dài.
+- Quy tắc áp dụng: Lớp `van` là xe có thân hộp nhỏ, kín, chở người; lớp `bus` không bao gồm xe van nhỏ.
+- Quyết định: Gán là `van` (Lớp 3).
+- Nếu vẫn thiếu bằng chứng, bạn sẽ làm gì? Ghi chú lý do vào nhật ký quyết định và đánh dấu `needs_review` để quay lại sau.
 
 ### Tình huống B — xe tải hay xe van/ô tô con?
 
-- Ảnh và mã vật thể: CHƯA ĐIỀN
-- Dấu hiệu nhìn thấy: CHƯA ĐIỀN
-- Quy tắc áp dụng: CHƯA ĐIỀN
-- Quyết định: CHƯA ĐIỀN
-- Nếu vẫn thiếu bằng chứng, bạn sẽ làm gì? CHƯA ĐIỀN
+- Ảnh và mã vật thể: drive_038.jpg, xe cứu hộ giao thông màu trắng ở phía dưới
+- Dấu hiệu nhìn thấy: Phần đuôi xe không phải thân hộp kín mà có thiết bị công vụ (thiết bị cứu hộ kéo xe).
+- Quy tắc áp dụng: Lớp `truck` gán cho xe có sàn hàng hoặc thiết bị công vụ rõ ràng; không gán lớp `van` (thân hộp kín khối).
+- Quyết định: Gán là `truck` (Lớp 1).
+- Nếu vẫn thiếu bằng chứng, bạn sẽ làm gì? Phóng to hình ảnh để xem cấu trúc phần đuôi xe, nếu mờ quá không phân loại được thì không đoán và ghi lý do vào nhật ký.
 
 ### Tình huống C — bị che, bị mép ảnh cắt hay không đủ bằng chứng?
 
-- Ảnh và mã vật thể: CHƯA ĐIỀN
-- Dấu hiệu nhìn thấy khi phóng 100%: CHƯA ĐIỀN
-- Giá trị `visibility`: CHƯA ĐIỀN
-- Giá trị `boundary`: CHƯA ĐIỀN
-- Trạng thái `review_state`: CHƯA ĐIỀN
-- Lý do: CHƯA ĐIỀN
+- Ảnh và mã vật thể: drive_033.jpg, xe buýt màu đỏ ở góc dưới bên trái
+- Dấu hiệu nhìn thấy khi phóng 100%: Xe nằm sát góc ảnh, bị cắt bởi mép dưới và mép trái, chỉ lộ nóc và một phần hông xe nhưng vẫn đủ chi tiết nhận dạng.
+- Giá trị `visibility`: `clear`
+- Giá trị `boundary`: `truncated`
+- Trạng thái `review_state`: `confident`
+- Lý do: Mặc dù vật thể bị chạm mép ảnh cắt ngang (`boundary` = `truncated`), phần còn lại nằm trong ảnh không bị vật khác che khuất (`visibility` = `clear`) và có đủ căn cứ để chắc chắn là xe buýt (`review_state` = `confident`).
 
 ## 6. Xác nhận tự kiểm tra
 
@@ -79,4 +79,4 @@ Hoàn thành trước khi xem bài của người khác hoặc bộ nhãn tham c
 - [ ] Đã hoàn thành ba tình huống trước khi xem nguồn đối chiếu.
 - [ ] Nếu làm theo cặp, hai người đã xuất bài độc lập trước khi trao đổi.
 - [ ] Nếu làm cá nhân, bài riêng đã được kiểm trước khi nhận bộ tham chiếu.
-- [ ] Số vật thể thực tế: CHƯA ĐIỀN — 40–60 là mục tiêu khối lượng, không phải điểm cắt.
+- [ ] Số vật thể thực tế: 50 — 40–60 là mục tiêu khối lượng, không phải điểm cắt.
